@@ -1,0 +1,93 @@
+---
+import { personalInfo, contacts } from "../data/summary.json";
+import MapPin from "../components/icons/MapPin.astro";
+import Email from "../components/icons/Email.astro";
+import Phone from "../components/icons/Phone.astro";
+import Twitter from "../components/icons/Twitter.astro";
+import Linkedin from "../components/icons/Linkedin.astro";
+import Github from "../components/icons/Github.astro";
+
+const componentsIcons: Record<string, any> = {
+  email: Email,
+  phone: Phone,
+  github: Github,
+  twitter: Twitter,
+  linkedin: Linkedin,
+};
+
+enum ContactType {
+  email = "email",
+  phone = "phone",
+  github = "github",
+  twitter = "twitter",
+  linkedin = "linkedin",
+}
+---
+
+<header class="flex justify-between">
+  <div>
+    <h1 class="text-3xl font-bold mb-1.5">{personalInfo.name}</h1>
+    <p class="font-medium text-lg">{personalInfo.about}</p>
+    <p class="font-normal flex items-center gap-2.5">
+      <span><MapPin /></span>{personalInfo.address}
+    </p>
+    <article class="flex gap-2.5 mt-4 isWeb">
+      {
+        contacts.map(({ name, url }) => {
+          const Icon = componentsIcons[name];
+          const isMail = name === ContactType.email;
+          const isPhone = name === ContactType.phone;
+          const urlHref = isMail
+            ? `mailto:${url}`
+            : isPhone
+              ? `tel:${url}`
+              : url;
+
+          return (
+            <a
+              href={urlHref}
+              class="p-1.5 border rounded-lg border-gray-300 text-gray-700 hover:text-blue-600 hover:bg-blue-100 hover:border-blue-300 transition-colors"
+              target={name === ContactType.email ? "_blank" : "_self"}
+            >
+              {Icon ? <Icon /> : name}
+            </a>
+          );
+        })
+      }
+    </article>
+    <article class="isPrint mt-4">
+      {
+        contacts.slice(0, 3).map(({ name, url: contactData }) => {
+          const Icon = componentsIcons[name];
+          return (
+            <p class="flex items-center gap-1.5 text-[15px]">
+              {Icon && <Icon />}
+              {contactData}
+            </p>
+          );
+        })
+      }
+    </article>
+  </div>
+  <div>
+    <img
+      src={`/picture/${personalInfo.picture}.png`}
+      alt={personalInfo.name}
+      class="w-32 h-32 rounded-3xl"
+    />
+  </div>
+</header>
+<style>
+  .isPrint {
+    display: none;
+  }
+  @media print {
+    .isWeb {
+      display: none;
+    }
+    .isPrint {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+</style>
