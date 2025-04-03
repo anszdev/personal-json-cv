@@ -1,0 +1,8 @@
+---
+import Section from "../Section.astro";
+import { personalInfo } from "../../data/summary.json";
+---
+
+<Section sectionTitle="Sobre mí">
+  <p class="text-pretty font-medium text-lg">{personalInfo.summary[0]}</p>
+</Section>
