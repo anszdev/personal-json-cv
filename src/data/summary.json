@@ -1,0 +1,124 @@
+{
+  "personalInfo": {
+    "name": "Ángel Baez Salazar",
+    "picture": "me",
+    "address": "EdoMex, México",
+    "phone": "+52 5631498641",
+    "email": "anszdev@outlook.com",
+    "about": "Frontend Web Developer con mas de 3 años de experiencia",
+    "summary": [
+      "+3 años de experiencia como Desarrollador Web, me dedico a crear soluciones que sean tanto atractivas como funcionales. Me caracterizo por mi habilidad de adaptarme y colaborar en equipo. Actualmente, estoy en la búsqueda de nuevas oportunidades que me permitan seguir avanzando en mi carrera y contribuir al éxito de cada proyecto en el que participe."
+    ]
+  },
+  "contacts": [
+    {
+      "name": "email",
+      "url": "anszdev@outlook.com"
+    },
+    {
+      "name": "phone",
+      "url": "+52 5631498641"
+    },
+    {
+      "name": "linkedin",
+      "url": "https://www.linkedin.com/in/anszdev/"
+    },
+    {
+      "name": "github",
+      "url": "https://github.com/anszdev"
+    },
+    {
+      "name": "twitter",
+      "url": "https://twitter.com/anszdev"
+    }
+  ],
+  "experiences": [
+    {
+      "jobTitle": "Desarrollador Web Frontend", 
+      "company": "Infomedia - Consultor en Grupo Salinas",
+      "date": "Febrero 2024 - Diciembre 2024",
+      "description": [
+        "Desarrollé e implementé nuevas funcionalidades para portales internos.",
+        "Optimizé código legacy, mejorando su rendimiento en un 50%.",
+        "Desarrollé pruebas unitarias para asegurar la calidad del código.",
+        "Colaboré exitosamente con equipos para garantizar el éxito de los proyectos."
+      ]
+    },
+    {
+      "jobTitle": "Líder de Proyecto y Frontend Developer",
+      "company": "Infomedia - Consultor en Grupo Salinas",
+      "date": "Agosto 2023 - Enero 2024",
+      "description": [
+        "Lideré el desarrollo de una aplicación web de fitness",
+        "Gestioné todas las fases del proyecto y rediseñé las interfaces.",
+        "Optimicé el rendimiento de la aplicación y mejoré la experiencia de usuario basada en análisis y feedback."
+      ]
+    },
+    {
+      "jobTitle": "Frontend Web Developer",
+      "company": "Freelancer",
+      "date": "Abril 2022 - Junio 2023",
+      "description": [
+        "Desarrollé proyectos diversos para una gama de clientes.",
+        "Utilicé tecnologías modernas, adaptándome a diferentes necesidades y objetivos."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "career": "Ingeniero en Desarrollo y Gestión de Software",
+      "institution": "Universidad Tecnológica de Nezahualcóyotl",
+      "date": "2019 - 2023"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "icon": "html"
+    },
+    {
+      "name": "CSS",
+      "icon": "css"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "js"
+    },
+    {
+      "name": "TypeScript",
+      "icon": "ts"
+    },
+    {
+      "name": "React",
+      "icon": "react"
+    },
+    {
+      "name": "Tailwind CSS",
+      "icon": "tailwind"
+    },
+    {
+      "name": "Node.js",
+      "icon": "node"
+    },
+    {
+      "name": "Astro",
+      "icon": "astro"
+    },
+    {
+      "name": "MySQL",
+      "icon": "mysql"
+    },
+    {
+      "name": "MongoDB",
+      "icon": "mongodb"
+    },
+    {
+      "name": "Git",
+      "icon": "git"
+    },
+    {
+      "name": "GitHub",
+      "icon": "github"
+    }
+  ]
+}
