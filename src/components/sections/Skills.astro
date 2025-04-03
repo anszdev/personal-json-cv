@@ -1,0 +1,49 @@
+---
+import Github from "../icons/Github.astro";
+
+import React from "../icons/React.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import Node from "../icons/Node.astro";
+import AstroI from "../icons/Astro.astro";
+import Mysql from "../icons/Mysql.astro";
+import Mongodb from "../icons/Mongodb.astro";
+import Git from "../icons/Git.astro";
+import Html from "../icons/Html.astro";
+import Css from "../icons/Css.astro";
+import Js from "../icons/Js.astro";
+import Ts from "../icons/Ts.astro";
+
+import Section from "../Section.astro";
+import { skills } from "../../data/summary.json";
+
+const skillIcons: Record<string, any> = {
+  react: React,
+  tailwind: Tailwind,
+  node: Node,
+  astro: AstroI,
+  mysql: Mysql,
+  mongodb: Mongodb,
+  git: Git,
+  html: Html,
+  css: Css,
+  js: Js,
+  ts: Ts,
+  github: Github,
+};
+---
+
+<Section sectionTitle="Habilidades">
+  <ul class="flex gap-2.5 flex-wrap">
+    {
+      skills.map(({ icon, name }) => {
+        const Icon = skillIcons[icon];
+        return (
+          <li class="p-1.5 border rounded-lg text-sm border-gray-300 text-gray-700 bg-gray-100 hover:text-blue-600 hover:bg-blue-100 hover:border-blue-300 transition-colors flex items-center gap-1.5 font-semibold">
+            {Icon && <Icon />}
+            {name}
+          </li>
+        );
+      })
+    }
+  </ul>
+</Section>
