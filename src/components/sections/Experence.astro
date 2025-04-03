@@ -1,0 +1,29 @@
+---
+import Section from "../Section.astro";
+import { experiences } from "../../data/summary.json";
+---
+
+<Section sectionTitle="Experiencia laboral">
+  <div class="flex flex-col gap-6">
+    {
+      experiences.map(({ company, date, description, jobTitle }) => (
+        <article class="border-b border-gray-300 pb-4 last:border-b-0">
+          <header class="flex justify-between items-start mb-2">
+            <div>
+              <h3 class="text-xl">{company}</h3>
+              <h4 class="text-lg font-semibold">{jobTitle}</h4>
+            </div>
+            <time datetime="" class="text-[13.5px] font-semibold">
+              {date}
+            </time>
+          </header>
+          <ul>
+            {description.map((desc) => (
+              <li class="text-[16.5px] list-disc ml-4">{desc}</li>
+            ))}
+          </ul>
+        </article>
+      ))
+    }
+  </div>
+</Section>
