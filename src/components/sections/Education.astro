@@ -1,0 +1,24 @@
+---
+import Section from "../Section.astro";
+import { education } from "../../data/summary.json";
+---
+
+<Section sectionTitle="Educación">
+  <div class="flex flex-col gap-6">
+    {
+      education.map(({ career, date, institution }) => (
+        <article class="border-b border-gray-300 pb-4 last:border-b-0">
+          <header class="flex justify-between items-start mb-2">
+            <div>
+              <h3 class="text-xl">{institution}</h3>
+              <h4 class="text-lg font-semibold">{career}</h4>
+            </div>
+            <time datetime="" class="text-[13.5px] font-semibold">
+              {date}
+            </time>
+          </header>
+        </article>
+      ))
+    }
+  </div>
+</Section>
